@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images To Pdf</title>
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css">
+</head>
+<body>
+    <div class="Main">
+        <!--start Heder Page -->
+        <div class="Header_Main">
+
+            <h1>
+               Images To Pdf
+            </h1>
+        </div>
+        <!--End Heder Page -->
+        <!--start Multi Page -->
+        @using (Html.BeginForm("Index", "_Covert", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+        <div id="Multi" class="Select_Page">
+            <label for="Files"> Select Images</label>
+            <br>
+            <input type="file" id="Files" style="display: none;" name="Files" multiple accept=".Png,.Jpg">
+
+            <input type="text" name="NameFile" id="Name_File" required placeholder="Enter Nmae File When Download" style="cursor: text; width: 20%; color: greenyellow; background-color: white; ">
+            <br>
+
+            <input type="submit" value="Covert And Download">
+        </div>
+        }
+        <!--start Multi Page -->
+
+    </div>
+</body>
+</html>

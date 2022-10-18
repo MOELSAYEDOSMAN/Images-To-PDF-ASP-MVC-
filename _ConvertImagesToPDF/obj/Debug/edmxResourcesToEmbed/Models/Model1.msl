@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CovertPdfModelStoreContainer" CdmEntityContainer="CovertPdfEntities">
+    <EntitySetMapping Name="Jpg_To_Pdf">
+      <EntityTypeMapping TypeName="CovertPdfModel.Jpg_To_Pdf">
+        <MappingFragment StoreEntitySet="Jpg_To_Pdf">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Images" ColumnName="Images" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
